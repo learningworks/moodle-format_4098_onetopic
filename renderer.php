@@ -30,7 +30,7 @@ require_once($CFG->dirroot.'/course/format/renderer.php');
  * @copyright 2012 David Herney Bernal - cirano
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class format_onetopic_renderer extends format_section_renderer_base {
+class format_onetopic_4098_renderer extends format_section_renderer_base {
 
     /**
      * Constructor method, calls the parent constructor
@@ -210,7 +210,7 @@ class format_onetopic_renderer extends format_section_renderer_base {
         }
 
         // Start single-section div
-        echo html_writer::start_tag('div', array('class' => 'single-section onetopic'));
+        echo html_writer::start_tag('div', array('class' => 'single-section onetopic_4098'));
 
         //Move controls
         $can_move = false;
@@ -331,7 +331,7 @@ class format_onetopic_renderer extends format_section_renderer_base {
                                 if ($parentformat_options['firsttabtext']) {
                                     $firsttab_text = $parentformat_options['firsttabtext'];
                                 } else {
-                                    $firsttab_text = get_string('index', 'format_onetopic');
+                                    $firsttab_text = get_string('index', 'format_onetopic_4098');
                                 }
                                 $tabs[$parent_index]->subtree[0]->text = '<div class="tab_content tab_initial">' . $firsttab_text. "</div>";
                                 $tabs[$parent_index]->subtree[0]->level = 2;
@@ -360,7 +360,7 @@ class format_onetopic_renderer extends format_section_renderer_base {
 
                             //ToDo: For new feature: subtabs. It is not implemented yet
                             /*
-                            $strsubtopictoright = get_string('subtopictoright', 'format_onetopic');
+                            $strsubtopictoright = get_string('subtopictoright', 'format_onetopic_4098');
                             $url = new moodle_url('/course/view.php', array('id' => $course->id, 'subtopicmove' => 'right', 'subtopic' => $section));
                             $icon = $this->output->pix_icon('t/right', $strsubtopictoright);
                             $subtopic_move = html_writer::link($url, $icon.get_accesshide($strsubtopictoright), array('class' => 'subtopic-increase-sections'));
@@ -469,20 +469,20 @@ class format_onetopic_renderer extends format_section_renderer_base {
         if ($PAGE->user_is_editing() && has_capability('moodle/course:update', $context)) {
 
             echo '<br class="utilities-separator" />';
-            print_collapsible_region_start('move-list-box clearfix collapsible mform', 'course_format_onetopic_config_movesection', get_string('utilities', 'format_onetopic'), '', true);
+            print_collapsible_region_start('move-list-box clearfix collapsible mform', 'course_format_onetopic_4098_config_movesection', get_string('utilities', 'format_onetopic_4098'), '', true);
             
 
             //Move controls
             if ($can_move && !empty($move_list_html)) {
                 echo html_writer::start_div("form-item clearfix");
                     echo html_writer::start_div("form-label");
-                        echo html_writer::tag('label', get_string('movesectionto', 'format_onetopic'));
+                        echo html_writer::tag('label', get_string('movesectionto', 'format_onetopic_4098'));
                     echo html_writer::end_div();
                     echo html_writer::start_div("form-setting");
                         echo html_writer::tag('ul', $move_list_html, array('class' => 'move-list'));
                     echo html_writer::end_div();
                     echo html_writer::start_div("form-description");
-                        echo html_writer::tag('p', get_string('movesectionto_help', 'format_onetopic'));
+                        echo html_writer::tag('p', get_string('movesectionto_help', 'format_onetopic_4098'));
                     echo html_writer::end_div();
                 echo html_writer::end_div();
             }
@@ -493,43 +493,43 @@ class format_onetopic_renderer extends format_section_renderer_base {
             $url = clone($baseurl);
 
             global $USER, $OUTPUT;
-            if (isset($USER->onetopic_da[$course->id]) && $USER->onetopic_da[$course->id]) {
-                $url->param('onetopic_da', 0);
-                $text_button_disableajax = get_string('enable', 'format_onetopic');
+            if (isset($USER->onetopic_4098_da[$course->id]) && $USER->onetopic_4098_da[$course->id]) {
+                $url->param('onetopic_4098_da', 0);
+                $text_button_disableajax = get_string('enable', 'format_onetopic_4098');
             }
             else {
-                $url->param('onetopic_da', 1);
-                $text_button_disableajax = get_string('disable', 'format_onetopic');
+                $url->param('onetopic_4098_da', 1);
+                $text_button_disableajax = get_string('disable', 'format_onetopic_4098');
             }
 
             echo html_writer::start_div("form-item clearfix");
                 echo html_writer::start_div("form-label");
-                    echo html_writer::tag('label', get_string('disableajax', 'format_onetopic'));
+                    echo html_writer::tag('label', get_string('disableajax', 'format_onetopic_4098'));
                 echo html_writer::end_div();
                 echo html_writer::start_div("form-setting");
                     echo html_writer::link($url, $text_button_disableajax);
                 echo html_writer::end_div();
                 echo html_writer::start_div("form-description");
-                    echo html_writer::tag('p', get_string('disableajax_help', 'format_onetopic'));
+                    echo html_writer::tag('p', get_string('disableajax_help', 'format_onetopic_4098'));
                 echo html_writer::end_div();
             echo html_writer::end_div();
 
             //Duplicate current section option
             if (has_capability('moodle/course:manageactivities', $context)) {
-                $url_duplicate = new moodle_url('/course/format/onetopic/duplicate.php', array('courseid' => $course->id, 'section' => $displaysection, 'sesskey' => sesskey()));
+                $url_duplicate = new moodle_url('/course/format/onetopic_4098/duplicate.php', array('courseid' => $course->id, 'section' => $displaysection, 'sesskey' => sesskey()));
 
-                $link = new action_link($url_duplicate, get_string('duplicate', 'format_onetopic'));
-                $link->add_action(new confirm_action(get_string('duplicate_confirm', 'format_onetopic'), null, get_string('duplicate', 'format_onetopic')));
+                $link = new action_link($url_duplicate, get_string('duplicate', 'format_onetopic_4098'));
+                $link->add_action(new confirm_action(get_string('duplicate_confirm', 'format_onetopic_4098'), null, get_string('duplicate', 'format_onetopic_4098')));
 
                 echo html_writer::start_div("form-item clearfix");
                     echo html_writer::start_div("form-label");
-                        echo html_writer::tag('label', get_string('duplicatesection', 'format_onetopic'));
+                        echo html_writer::tag('label', get_string('duplicatesection', 'format_onetopic_4098'));
                     echo html_writer::end_div();
                     echo html_writer::start_div("form-setting");
                         echo $this->render($link);
                     echo html_writer::end_div();
                     echo html_writer::start_div("form-description");
-                        echo html_writer::tag('p', get_string('duplicatesection_help', 'format_onetopic'));
+                        echo html_writer::tag('p', get_string('duplicatesection_help', 'format_onetopic_4098'));
                     echo html_writer::end_div();
                 echo html_writer::end_div();
             }

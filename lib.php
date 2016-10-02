@@ -14,10 +14,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * This file contains main class for the course format Onetopic
+ * This file contains main class for the course format Onetopic 4098
  *
  * @since     2.0
- * @package   format_onetopic
+ * @package   format_onetopic_4098
  * @copyright 2012 David Herney Bernal - cirano
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 require_once($CFG->dirroot. '/course/format/lib.php');
 
 /**
- * Main class for the Onetopic course format
+ * Main class for the Onetopic 4098 course format
  *
  * @since 2.0
  * @package contribution
@@ -34,7 +34,7 @@ require_once($CFG->dirroot. '/course/format/lib.php');
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class format_onetopic extends format_base {
+class format_onetopic_4098 extends format_base {
 
     /**
      * Returns true if this course format uses sections
@@ -59,7 +59,7 @@ class format_onetopic extends format_base {
             return format_string($section->name, true,
                     array('context' => context_course::instance($this->courseid)));
         } else {
-            return get_string('sectionname', 'format_onetopic') . ' ' . $section->section;
+            return get_string('sectionname', 'format_onetopic_4098') . ' ' . $section->section;
         }
     }
 
@@ -113,11 +113,11 @@ class format_onetopic extends format_base {
     public function supports_ajax() {
         global $course, $USER;
 
-        if (!isset($USER->onetopic_da)) {
-            $USER->onetopic_da = array();
+        if (!isset($USER->onetopic_4098_da)) {
+            $USER->onetopic_4098_da = array();
         }
 
-        $disable_ajax = isset($USER->onetopic_da[$course->id]) ? $USER->onetopic_da[$course->id] : false;
+        $disable_ajax = isset($USER->onetopic_4098_da[$course->id]) ? $USER->onetopic_4098_da[$course->id] : false;
 
         $ajaxsupport = new stdClass();
         $ajaxsupport->capable = !$disable_ajax;
@@ -255,9 +255,9 @@ class format_onetopic extends format_base {
                     ),
                 ),
                 'hidetabsbar' => array(
-                    'label' => get_string('hidetabsbar', 'format_onetopic'),
+                    'label' => get_string('hidetabsbar', 'format_onetopic_4098'),
                     'help' => 'hidetabsbar',
-                    'help_component' => 'format_onetopic',
+                    'help_component' => 'format_onetopic_4098',
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
@@ -267,16 +267,16 @@ class format_onetopic extends format_base {
                     ),
                 ),
                 'coursedisplay' => array(
-                    'label' => new lang_string('coursedisplay', 'format_onetopic'),
+                    'label' => new lang_string('coursedisplay', 'format_onetopic_4098'),
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            COURSE_DISPLAY_SINGLEPAGE => new lang_string('coursedisplay_single', 'format_onetopic'),
-                            COURSE_DISPLAY_MULTIPAGE => new lang_string('coursedisplay_multi', 'format_onetopic')
+                            COURSE_DISPLAY_SINGLEPAGE => new lang_string('coursedisplay_single', 'format_onetopic_4098'),
+                            COURSE_DISPLAY_MULTIPAGE => new lang_string('coursedisplay_multi', 'format_onetopic_4098')
                         )
                     ),
                     'help' => 'coursedisplay',
-                    'help_component' => 'format_onetopic',
+                    'help_component' => 'format_onetopic_4098',
                 )
             );
             $courseformatoptions = array_merge_recursive($courseformatoptions, $courseformatoptionsedit);
@@ -318,7 +318,7 @@ class format_onetopic extends format_base {
     /**
      * Updates format options for a course
      *
-     * In case if course format was changed to 'onetopic', we try to copy special options from the previous format.
+     * In case if course format was changed to 'onetopic_4098', we try to copy special options from the previous format.
      * If previous course format did not have the options, we populate it with the
      * current number of sections and default options
      *
@@ -404,44 +404,44 @@ class format_onetopic extends format_base {
                 'level' => array(
                     'default' => 0,
                     'type' => PARAM_INT,
-                    'label' => get_string('level', 'format_onetopic'),
+                    'label' => get_string('level', 'format_onetopic_4098'),
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            0 => get_string('asprincipal', 'format_onetopic'),
-                            1 => get_string('aschild', 'format_onetopic')
+                            0 => get_string('asprincipal', 'format_onetopic_4098'),
+                            1 => get_string('aschild', 'format_onetopic_4098')
                         )
                     ),
                     'help' => 'level',
-                    'help_component' => 'format_onetopic',
+                    'help_component' => 'format_onetopic_4098',
                 ),
                 'firsttabtext' => array(
-                    'default' => get_string('index', 'format_onetopic'),
+                    'default' => get_string('index', 'format_onetopic_4098'),
                     'type' => PARAM_TEXT,
-                    'label' => get_string('firsttabtext', 'format_onetopic'),
+                    'label' => get_string('firsttabtext', 'format_onetopic_4098'),
                     'help' => 'firsttabtext',
-                    'help_component' => 'format_onetopic',
+                    'help_component' => 'format_onetopic_4098',
                 ),
                 'fontcolor' => array(
                     'default' => '',
                     'type' => PARAM_RAW,
-                    'label' => get_string('fontcolor', 'format_onetopic'),
+                    'label' => get_string('fontcolor', 'format_onetopic_4098'),
                     'help' => 'fontcolor',
-                    'help_component' => 'format_onetopic',
+                    'help_component' => 'format_onetopic_4098',
                 ),
                 'bgcolor' => array(
                     'default' => '',
                     'type' => PARAM_RAW,
-                    'label' => get_string('bgcolor', 'format_onetopic'),
+                    'label' => get_string('bgcolor', 'format_onetopic_4098'),
                     'help' => 'bgcolor',
-                    'help_component' => 'format_onetopic',
+                    'help_component' => 'format_onetopic_4098',
                 ),
                 'cssstyles' => array(
                     'default' => '',
                     'type' => PARAM_RAW,
-                    'label' => get_string('cssstyles', 'format_onetopic'),
+                    'label' => get_string('cssstyles', 'format_onetopic_4098'),
                     'help' => 'cssstyles',
-                    'help_component' => 'format_onetopic',
+                    'help_component' => 'format_onetopic_4098',
                 )
             );
 

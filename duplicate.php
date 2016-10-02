@@ -29,7 +29,7 @@ $courseid = required_param('courseid', PARAM_INT);
 $section = required_param('section', PARAM_INT);
 $course = $DB->get_record('course', array('id' => $courseid), '*', MUST_EXIST);
 
-$PAGE->set_url('/course/format/onetopic/duplicate.php', array('courseid' => $courseid, 'section' => $section));
+$PAGE->set_url('/course/format/onetopic_4098/duplicate.php', array('courseid' => $courseid, 'section' => $section));
 
 // Authorization checks.
 require_login($course);
@@ -53,8 +53,8 @@ echo $OUTPUT->header();
 
 if (!empty($sectioninfo)) {
 
-    $pbar = new progress_bar('onetopic_duplicate_bar', 500, true);
-    $pbar->update_full(1, get_string('duplicating', 'format_onetopic'));
+    $pbar = new progress_bar('onetopic_4098_duplicate_bar', 500, true);
+    $pbar->update_full(1, get_string('duplicating', 'format_onetopic_4098'));
 
     $course_format = course_get_format($course);
 
@@ -69,7 +69,7 @@ if (!empty($sectioninfo)) {
         return;
     }
 
-    $pbar->update_full(5, get_string('creating_section', 'format_onetopic'));
+    $pbar->update_full(5, get_string('creating_section', 'format_onetopic_4098'));
 
     //Assign same section info
     $data = new stdClass();
@@ -106,7 +106,7 @@ if (!empty($sectioninfo)) {
         );
     $event->trigger();
 
-    $pbar->update_full(10, get_string('rebuild_course_cache', 'format_onetopic'));
+    $pbar->update_full(10, get_string('rebuild_course_cache', 'format_onetopic_4098'));
     //rebuild_course_cache($course->id, true);
     $new_sectioninfo = $modinfo->get_section_info($num_newsection);
 
@@ -122,7 +122,7 @@ if (!empty($sectioninfo)) {
             $data_progress->current = 0;
             $data_progress->size = $progress_bar_elements;
             $k = 0;
-            $pbar->update_full(40, get_string('progress_counter', 'format_onetopic', $data_progress));
+            $pbar->update_full(40, get_string('progress_counter', 'format_onetopic_4098', $data_progress));
             foreach ($section_mods as $modnumber) {
                 $k++;
                 $mod = $modinfo->cms[$modnumber];
@@ -140,19 +140,19 @@ if (!empty($sectioninfo)) {
                 }
                 $data_progress->current = $k;
                 $percent = 40 + ($k / $progress_bar_elements) * 60;
-                $pbar->update_full($percent, get_string('progress_counter', 'format_onetopic', $data_progress));
+                $pbar->update_full($percent, get_string('progress_counter', 'format_onetopic_4098', $data_progress));
             }
         }
     }
     else {
-        $pbar->update_full(100, get_string('progress_full', 'format_onetopic'));
+        $pbar->update_full(100, get_string('progress_full', 'format_onetopic_4098'));
     }
 
     $section_togo = $num_newsection;
 }
 else {
     $section_togo = $section;
-    echo get_string('error_nosectioninfo', 'format_onetopic');
+    echo get_string('error_nosectioninfo', 'format_onetopic_4098');
     echo $OUTPUT->continue_button(course_get_url($course, $section));
     echo $OUTPUT->footer();
 }

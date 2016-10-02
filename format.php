@@ -50,18 +50,18 @@ if (($marker >=0) && has_capability('moodle/course:setcurrentsection', $context)
 $course = course_get_format($course)->get_course();
 course_create_sections_if_missing($course, range(0, $course->numsections));
 
-//onetopic format is always multipage
+//onetopic_4098 format is always multipage
 $course->realcoursedisplay = $course->coursedisplay == COURSE_DISPLAY_MULTIPAGE;
 $course->coursedisplay = COURSE_DISPLAY_MULTIPAGE;
 
-$renderer = $PAGE->get_renderer('format_onetopic');
+$renderer = $PAGE->get_renderer('format_onetopic_4098');
 
 $section = optional_param('section', -1, PARAM_INT);
 
 if (isset($section) && $section >= 0 && $course->numsections >= $section) {
-     $USER->display[$course->id] = $section;
-     $displaysection = $section;
-} 
+    $USER->display[$course->id] = $section;
+    $displaysection = $section;
+}
 else {
     if (isset($USER->display[$course->id]) && $course->numsections >= $USER->display[$course->id]) {
         $displaysection = $USER->display[$course->id];
@@ -71,18 +71,18 @@ else {
     }
 }
 
-$disable_ajax = optional_param('onetopic_da', -1, PARAM_INT);
+$disable_ajax = optional_param('onetopic_4098_da', -1, PARAM_INT);
 
-if (!isset($USER->onetopic_da)) {
-    $USER->onetopic_da = array();
+if (!isset($USER->onetopic_4098_da)) {
+    $USER->onetopic_4098_da = array();
 }
 
 if ($disable_ajax !== -1) {
     if ($disable_ajax === 0) {
-        $USER->onetopic_da[$course->id] = false;
+        $USER->onetopic_4098_da[$course->id] = false;
     }
     else {
-        $USER->onetopic_da[$course->id] = true;
+        $USER->onetopic_4098_da[$course->id] = true;
     }
 }
 

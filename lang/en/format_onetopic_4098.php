@@ -24,9 +24,9 @@
 
 $string['currentsection'] = 'This topic';
 $string['sectionname'] = 'Topic';
-$string['pluginname'] = 'Onetopic format';
-$string['page-course-view-topics'] = 'Any course main page in onetopic format';
-$string['page-course-view-topics-x'] = 'Any course page in onetopic format';
+$string['pluginname'] = 'Onetopic  4098 format';
+$string['page-course-view-topics'] = 'Any course main page in onetopic 4098 format';
+$string['page-course-view-topics-x'] = 'Any course page in onetopic 4098 format';
 $string['hidefromothers'] = 'Hide topic';
 $string['showfromothers'] = 'Show topic';
 $string['hidetabsbar'] = 'Hide tabs bar';
