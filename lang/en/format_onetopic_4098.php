@@ -24,7 +24,7 @@
 
 $string['currentsection'] = 'This topic';
 $string['sectionname'] = 'Topic';
-$string['pluginname'] = 'Onetopic  4098 format';
+$string['pluginname'] = 'Onetopic for 4098';
 $string['page-course-view-topics'] = 'Any course main page in onetopic 4098 format';
 $string['page-course-view-topics-x'] = 'Any course page in onetopic 4098 format';
 $string['hidefromothers'] = 'Hide topic';
