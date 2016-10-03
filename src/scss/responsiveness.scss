@@ -4,7 +4,7 @@
     .image-lw {
         width: 10%;
         margin-bottom: 0.5em;
-        
+
         img {
             width: 10%;
         }
@@ -18,13 +18,5 @@
         &.land img {
             width: 50%;
         }
-    }
-
-    .image-lw.port img {
-        width: 40% !important;
-    }
-
-    .image-lw.land img {
-        width: 50%;
     }
 }
