@@ -1,25 +1,178 @@
-.course-content ul.topics {margin:0;}
-.course-content ul.topics li.section {list-style: none;margin:5px 0 0 0;padding:0;}
-.course-content ul.topics li.section .content {margin:0 40px;}
-.course-content ul.topics li.section .left {width:40px;float:left;text-align:center;}
-.course-content ul.topics li.section .right {width:40px;float:right;text-align:center;}
-.jumpmenu {text-align:center;}
-.course-content div.single-section .tabtree .tabrow0 li {line-height: 28px; display: inline-block; }
-/*.course-content div.single-section .tabtree .tabrow0 li {line-height: 26px; }*/
-.course-content div.single-section .tabtree .tabrow0 li.here .empty { bottom: 3px; display: block; height: 1px; left: 0; right: 0;  }
-.course-content div.single-section .tabtree { margin-bottom: 0px; }
+.course-content ul.topics {
+  margin: 0; }
+  .course-content ul.topics li.section {
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0; }
+    .course-content ul.topics li.section .content {
+      margin: 0 40px; }
+    .course-content ul.topics li.section .left {
+      width: 40px;
+      float: left;
+      text-align: center; }
+    .course-content ul.topics li.section .right {
+      width: 40px;
+      float: right;
+      text-align: center; }
 
-.foramt-onetopic_4098 .tab_content { white-space: nowrap; }
-.foramt-onetopic_4098 .tab_content.marker { font-style: italic; }
+.jumpmenu {
+  text-align: center; }
 
-.foramt-onetopic_4098 .utilities-separator { clear: both; margin-top: 15px; }
+.course-content div.single-section .tabtree {
+  margin-bottom: 0px; }
+  .course-content div.single-section .tabtree .tabrow0 li {
+    line-height: 28px;
+    display: inline-block; }
+    .course-content div.single-section .tabtree .tabrow0 li.here .empty {
+      bottom: 3px;
+      display: block;
+      height: 1px;
+      left: 0;
+      right: 0; }
 
-.foramt-onetopic_4098 ul.nav-tabs li a .tab_content.dimmed { color: #999; opactity: 0.5; }
+.format-onetopic_4098 .tab_content {
+  white-space: nowrap; }
+  .format-onetopic_4098 .tab_content.marker {
+    font-style: italic; }
 
-.foramt-onetopic_4098 .subtopic-increase-sections { margin-right: 10px; }
+.format-onetopic_4098 .utilities-separator {
+  clear: both;
+  margin-top: 15px; }
 
-.foramt-onetopic_4098 li.sublevel { padding-left: 20px; }
+.format-onetopic_4098 ul.nav-tabs li a .tab_content.dimmed {
+  color: #999;
+  opactity: 0.5; }
 
-.foramt-onetopic_4098 .onetopic_4098 .nav-tabs > li > a { padding: 0; }
+.format-onetopic_4098 .subtopic-increase-sections {
+  margin-right: 10px; }
 
-.foramt-onetopic_4098 .onetopic_4098 .tab_content { padding: 8px 12px; }
+.format-onetopic_4098 li.sublevel {
+  padding-left: 20px; }
+
+.format-onetopic_4098 .onetopic_4098 .nav-tabs > li > a {
+  padding: 0; }
+
+.format-onetopic_4098 .onetopic_4098 .tab_content {
+  padding: 8px 12px; }
+
+.format-onetopic_4098 div[role=main] h2 {
+  color: #749719; }
+
+.format-onetopic_4098 div[role=main] .box.contents .no-overflow > h3 {
+  color: #749719; }
+
+.format-onetopic_4098 div[role=main] a.lessonbutton.standardbutton,
+.format-onetopic_4098 div[role=main] .lw-button-group a,
+.format-onetopic_4098 div[role=main] .lw-button-group a.lessonbutton.standardbutton,
+.format-onetopic_4098 div[role=main] span.lessonbutton.standardbutton a {
+  margin: 0 0 10px 5px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom-color: #b3b3b3;
+  color: #fff;
+  background-color: #a03b90;
+  background-image: linear-gradient(to bottom, #a03b90, #a03b90);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px #68265e;
+  outline: none;
+  padding: 0.5em 1em;
+  border: none;
+  font-family: "MavenPro";
+  font-weight: bold;
+  width: auto;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+  .format-onetopic_4098 div[role=main] a.lessonbutton.standardbutton:hover,
+  .format-onetopic_4098 div[role=main] .lw-button-group a:hover,
+  .format-onetopic_4098 div[role=main] .lw-button-group a.lessonbutton.standardbutton:hover,
+  .format-onetopic_4098 div[role=main] span.lessonbutton.standardbutton a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #8d347f;
+    margin: 0 0 10px 5px;
+    background-image: linear-gradient(to bottom, #8d347f, #8d347f);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px #68265e;
+    position: relative;
+    top: 2px;
+    background-position: 0 -15px;
+    transition: background-position 0.1s linear; }
+
+.format-onetopic_4098 div[role=main] a.lessonbutton.standardbutton + a.lessonbutton.standardbutton {
+  float: left; }
+
+.format-onetopic_4098 div[role=main] form > div.singlebutton {
+  float: left; }
+
+.format-onetopic_4098 div[role=main] .lw-button-group.two-buttons > .lessonbutton.standardbutton {
+  float: left; }
+  .format-onetopic_4098 div[role=main] .lw-button-group.two-buttons > .lessonbutton.standardbutton + .lessonbutton.standardbutton {
+    float: right; }
+
+.format-onetopic_4098 .fitem .felement {
+  margin-left: 0; }
+
+.format-onetopic_4098 .mform .fitem.fitem_fradio .fitemtitle {
+  width: 0px; }
+
+.format-onetopic_4098 .mform .fitem:not(.fitem_fradio) .fitemtitle {
+  padding-right: 10px;
+  width: auto; }
+
+.format-onetopic_4098 span.lessonbutton.standardbutton a {
+  margin-top: 10px; }
+
+.format-onetopic_4098 span.lessonbutton.standardbutton a:hover {
+  margin-top: 10px; }
+
+.format-onetopic_4098 .singlebutton {
+  padding-top: 10px; }
+
+.format-onetopic_4098 .lw-button-group .two-buttons,
+.format-onetopic_4098 .lw-button-group {
+  overflow: hidden; }
+
+.format-onetopic_4098 .lw-button-group .two-buttons {
+  float: right; }
+
+.format-onetopic_4098 .lw-padding-left-15 {
+  padding-left: 15px; }
+
+.format-onetopic_4098 .image-lw img {
+  width: 100%; }
+
+.format-onetopic_4098 .tutor-introduction-video .mediaplugin object object {
+  max-width: 100%;
+  max-height: 368px; }
+
+.format-onetopic_4098 .image-lw.port img {
+  max-height: 220px;
+  width: auto; }
+
+.format-onetopic_4098 .box.branchbuttoncontainer.horizontal {
+  margin-top: 1.5em; }
+
+@media (max-width: 767px) {
+  .image-lw {
+    width: 10%;
+    margin-bottom: 0.5em; }
+    .image-lw img {
+      width: 10%; }
+    .image-lw.port img {
+      width: 40%; }
+    .image-lw.land img {
+      width: 50%; }
+  .image-lw.port img {
+    width: 40% !important; }
+  .image-lw.land img {
+    width: 50%; } }

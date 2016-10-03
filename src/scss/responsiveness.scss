@@ -1,0 +1,30 @@
+// Responsive styling.
+
+@media (max-width: 767px) {
+    .image-lw {
+        width: 10%;
+        margin-bottom: 0.5em;
+        
+        img {
+            width: 10%;
+        }
+
+        // The width of portrait images.
+        &.port img {
+            width: 40%;
+        }
+
+        // The width of landscape images.
+        &.land img {
+            width: 50%;
+        }
+    }
+
+    .image-lw.port img {
+        width: 40% !important;
+    }
+
+    .image-lw.land img {
+        width: 50%;
+    }
+}

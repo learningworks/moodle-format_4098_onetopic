@@ -1,0 +1,161 @@
+// This file defines the styles that will be used in the custom onetopic course format for the LearningWorks courses that
+// use the 4098 course template.
+
+.format-onetopic_4098 {
+    div[role=main] {
+        // Make h2's green.
+        h2 {
+            color: color(green);
+        }
+
+        // Make h3's green
+        .box.contents .no-overflow > h3 {
+            color: color(green);
+        }
+
+        // Style some buttons in here.
+        // Todo: This could be a little drier in future.
+        a.lessonbutton.standardbutton,
+        .lw-button-group a,
+        .lw-button-group a.lessonbutton.standardbutton,
+        span.lessonbutton.standardbutton a {
+            margin: 0 0 10px 5px;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom-color: #b3b3b3;
+            color: #fff;
+            background-color: #a03b90;
+            background-image: linear-gradient(to bottom, #a03b90, #a03b90);
+            background-repeat: repeat-x;
+            border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1);
+            box-shadow: 0 3px #68265e;
+            outline: none;
+            padding: 0.5em 1em;
+            border: none;
+            font-family: "MavenPro";
+            font-weight: bold;
+            width: auto;
+
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+
+            // Do some other stuff when these are being hovered over.
+            &:hover {
+                text-decoration: none;
+                color: #fff;
+                background-color: #8d347f;
+                margin: 0 0 10px 5px;
+                background-image: linear-gradient(to bottom, #8d347f, #8d347f);
+                background-repeat: repeat-x;
+                border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+                box-shadow: 0 1px #68265e;
+                position: relative;
+                top: 2px;
+                background-position: 0 -15px;
+                transition: background-position 0.1s linear;
+            }
+        }
+
+        // For some reason the next activity link is on the left where naturally a previous button will be. Lets switch them around.
+        a.lessonbutton.standardbutton + a.lessonbutton.standardbutton {
+            float: left;
+        }
+
+        form > div.singlebutton {
+            float: left;
+        }
+
+        // Make some links float right and left. Not sure if they are required now though but are here anyway.
+        .lw-button-group.two-buttons > .lessonbutton.standardbutton {
+            float: left;
+
+            // Make this button float right.
+            & + .lessonbutton.standardbutton {
+                float: right;
+            }
+        }
+
+    }   // End div[role=main] styling.
+
+    // Do something to some felements.
+    .fitem .felement {
+        margin-left: 0;
+    }
+
+    // Do some things that are in a mform.
+    .mform .fitem {
+        // This must style the titiles for fitems.
+        &.fitem_fradio .fitemtitle {
+            width: 0px;
+        }
+
+        // Apply some styling to not fitem radio elements.
+        &:not(.fitem_fradio) .fitemtitle {
+            padding-right: 10px;
+            width: auto;
+        }
+    }
+
+    // Style some of the links in the button elements.
+    span.lessonbutton.standardbutton {
+        a {
+            margin-top: 10px;
+        }
+
+        a:hover {
+            margin-top:10px;
+        }
+    }
+
+    // Style the singlebutton div elements.
+    .singlebutton {
+        padding-top: 10px;
+    }
+
+    // Remove the scroll bar from custom button group class.
+    .lw-button-group .two-buttons,
+    .lw-button-group {
+        overflow: hidden;
+    }
+
+    // Make the button group with two buttons float right.
+    .lw-button-group .two-buttons {
+        float: right;
+    }
+
+    // An un-intuitive class that tries to look clever with a number that represents some padding. This actually isn't.
+    // Todo: Somewhere have a function that is intuitive.
+    .lw-padding-left-15 {
+        padding-left: 15px;
+    }
+
+    // Do some custom things with images in a image-lw class.
+    .image-lw img {
+        width: 100%;
+    }
+
+    // Limit the introduction video sizes.
+    .tutor-introduction-video .mediaplugin object object {
+        max-width: 100%;
+        max-height: 368px;
+    }
+
+    // A bunch of random styles that I'm not sure of but will still put here.
+    .image-lw.port img {
+        max-height: 220px;
+        width: auto;
+    }
+
+    .box.branchbuttoncontainer.horizontal {
+        margin-top: 1.5em;
+    }
+}

@@ -1,0 +1,10 @@
+// Declare some variables i.e. colors etc.
+$colors: (
+    // The green to use for text.
+    green: #749719
+);
+
+// A function that will help get the colors from the map.
+@function color($key) {
+    @return map-get($colors, $key);
+}
