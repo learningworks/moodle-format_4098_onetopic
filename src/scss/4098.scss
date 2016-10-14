@@ -2,6 +2,16 @@
 // use the 4098 course template.
 
 .format-onetopic_4098 {
+	 label{
+		text-align:left;
+	}
+	select{
+		float:left;
+		clear:both;
+	}
+	.correctanswer.generalbox > p{
+ 		margin:10px 0 0 0;
+	}
     div[role=main] {
         // Make h2's green.
         h2 {
